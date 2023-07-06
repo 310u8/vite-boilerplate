@@ -1,0 +1,32 @@
+-siteName = "My Website"
+-domain = "www.example.com"
+
+if title == ""
+  -title = siteName
+else
+  -title = title + " - " + siteName
+
+meta(charset="utf-8")
+meta(http-equiv="Content-Language", content="ja")
+
+title=title
+meta(name="description", content=`${description}`)
+
+meta(property="og:title", content=`${title}`)
+meta(property="og:type", content="website")
+meta(property="og:url", content=`https://${domain}${url}`)
+meta(property="og:description", content=`${description}`)
+meta(property="og:site_name", content=`${siteName}`)
+meta(property="og:image", content=`https://${domain}/assets/img/og_image.png`)
+meta(property="og:locale", content="ja_JP")
+meta(property="fb:app_id", content="")
+meta(name="twitter:card", content="summary_large_image")
+meta(name="twitter:site", content="@")
+meta(name="twitter:title", content=`${title}`)
+meta(name="twitter:description", content=`${description}`)
+meta(name="twitter:image", content=`https://${domain}/assets/img/og_image.png`)
+meta(name="twitter:url", content=`https://${domain}${url}`)
+meta(name="viewport" content="width=device-width")
+meta(name="format-detection", content="telephone=no")
+link(rel="stylesheet", href="/assets/sass/common.sass")
+link(rel="shortcut icon", href="/assets/img/favicon.ico")
